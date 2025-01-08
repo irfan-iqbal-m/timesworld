@@ -17,8 +17,9 @@ class GMMailController extends Controller
             'subject' => 'Good Morning Mail',
             'name' => $user->name
         ];
-     
-        GoodMorningEmailJob::dispatch($data);
+
+            GoodMorningEmailJob::dispatch($data); 
     }
+        echo 'Queue initiated';
     }
 }
